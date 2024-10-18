@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.writing {
+  font-family: "Playwrite GB S", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+img {
+  top: 25px;
+  left: 250px;
+  width: 250px;
+  height: 250px;
+}
+
+p {
+  color: red;
+}/*# sourceMappingURL=style.css.map */
