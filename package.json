@@ -6,9 +6,8 @@
   
   "scripts": {
   "watch:sass": "sass style.scss ./src/style.css", 
-  "watch:tailwind": "npx tailwindcss -i ./src/style.css -o ./src/style.css --minify --watch", 
-  "build": "npm run watch:sass && npm run watch:tailwind",
-  "compile:sass": "node-sass sass/style.scss ./src/style.css -w"
+  "watch:tailwind": "npx tailwindcss -i ./src/style.css -o ./src/style.css --minify", 
+  "build": "npm run watch:sass && npm run watch:tailwind"
   }
  
 }

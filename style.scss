@@ -11,3 +11,76 @@
   padding: 0;
 }
 
+.writing {
+  font-family: "Charm";
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 80px;
+}
+
+header, h1 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 50px;
+}
+
+h1 {
+  margin-top: 75px;
+  margin-left: 10%;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.navbar-main {
+  width: 100%;
+  height: 50px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 10px 10px 20px 10px;
+  border-style: dashed;
+  margin-bottom: 10px;
+}
+
+.navbar-main, a {
+  display: inline-block;
+  padding: 3px 25px 5px 25px;
+  text-align: center;
+  font-size: $font-size;
+}
+
+a:hover {
+  cursor: pointer;
+  color: $secondarycolor;
+}
+
+.books {
+  display: flex;
+  flex-direction: column;
+  margin: 25px 450px 25px 25px;
+  padding: 10px 10px 10px 10px;
+  border: 5px double black;
+  text-align: center;
+  height: auto;
+}
+
+.events {
+  display: flex;
+  flex-direction: column;
+  margin: 25px 25px 25px 850px;
+  border: 5px double black;
+  text-align: center;
+  height: auto;
+  padding-top: 10px;
+  margin-top: -303px;
+  flex-wrap: wrap;
+  position: absolute;
+}
+
+h2 {
+  font-size: $font-size;
+}
