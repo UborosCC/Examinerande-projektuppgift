@@ -11,6 +11,19 @@
   padding: 0;
 }
 
+body {
+  background-image: url('https://i.ibb.co/JdR237x/booksbg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.article-text {
+  font-family: "Kurale", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .writing {
   font-family: "Charm";
   font-optical-sizing: auto;
@@ -19,19 +32,18 @@
   font-size: 80px;
 }
 
-header, h1 {
+header {
   display: flex;
-  align-items: flex-start;
-  flex-direction: row;
-  gap: 50px;
+  justify-content: center;
 }
 
 h1 {
-  margin-top: 75px;
-  margin-left: 10%;
+  align-self: center;
+  padding: 5px;
+  text-shadow: 3px 3px rgba(255,255,255, .8);
 }
 
-img {
+.logo {
   width: 200px;
   height: 200px;
 }
@@ -44,9 +56,10 @@ img {
   padding: 10px 10px 20px 10px;
   border-style: dashed;
   margin-bottom: 10px;
+  background-color: $primarycolor;
 }
 
-.navbar-main, a {
+.navbar-main, a, .active {
   display: inline-block;
   padding: 3px 25px 5px 25px;
   text-align: center;
@@ -58,29 +71,285 @@ a:hover {
   color: $secondarycolor;
 }
 
-.books {
-  display: flex;
-  flex-direction: column;
-  margin: 25px 450px 25px 25px;
-  padding: 10px 10px 10px 10px;
-  border: 5px double black;
+.main {
+  display: grid;
+  grid-template-areas: 
+  'books books events'
+  'books books events';
   text-align: center;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.books {
+  grid-area: books;
+  border: $border;
   height: auto;
+  background-color: white;
+  font-family: $article-text; 
+}
+
+.books-img {
+  margin: 20px 10px;
+  display: inline-block;
+  height: 300px;
+  width: 200px;
 }
 
 .events {
-  display: flex;
-  flex-direction: column;
-  margin: 25px 25px 25px 850px;
-  border: 5px double black;
-  text-align: center;
+  grid-area: events;
+  border: $border;
   height: auto;
-  padding-top: 10px;
-  margin-top: -303px;
-  flex-wrap: wrap;
-  position: absolute;
+  background-color: white;
+  font-family: $article-text; 
+}
+
+.events-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.events-container {
+  display: flex;
+  justify-content: flex-end;
+  text-align: left;
+  width: 500px;
+  height: 250px;
+  margin: 10px 0;
+  background-color: white;
+  border: $border;
+  border-radius: 10px;
+}
+
+.events-image {
+  width: 200px;
+  height: auto;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: $border;
 }
 
 h2 {
+  font-size: $font-size;
+}
+
+@media screen and (max-width: 480px) {
+    .books {
+      display: flex;
+      flex-direction: column;
+    }
+    .events {
+      display: flex;
+      flex-direction: column;
+    }
+}
+
+footer {
+  display: grid;
+  grid-template-areas: 
+  'con hour map map'
+  'con hour map map';
+  background-color: black;
+  color: $primarycolor;
+  border-top: dashed white 2px;
+  margin-top: 20px;
+}
+
+.footer-h3 {
+  text-decoration: underline;
+  margin: 20px 0;
+}
+
+.contact, .open-hours, .map {
+  padding: 15px;
+}
+
+.contact {
+  grid-area: con;
+}
+
+.open-hours {
+  grid-area: hour;
+}
+
+.map {
+  grid-area: map;
+}
+
+.social-media {
+  background-color: $primarycolor;
+  border: $border;
+  border-radius: 10px;
+  width: 75px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.social-image {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+}
+
+.timetable {
+  border: white 5px double;
+  margin: 15px 0;
+
+  td {
+    padding: 10px 15px;
+  }
+}
+
+.g-maps {
+  border: white 5px double;
+  margin: 15px 0;
+}
+
+/*Evenemang*/
+
+.event-main {
+  text-align: center;
+  font-family: $article-text;
+}
+
+.evenemang-h1 {
+  display: inline-block;
+  text-align: center;
+  font-size: 30px;
+  background-color: white;
+  border: $border;
+  border-radius: 10px;
+  width: 500px;
+  margin: 20px 0;
+}
+
+.event-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: auto;
+}
+
+.event-container {
+  display: flex;
+  justify-content: flex-end;
+  text-align: left;
+  width: 500px;
+  height: 300px;
+  margin: 20px;
+  background-color: white;
+  border: $border;
+  border-radius: 10px;
+}
+
+.event-title {
+  display: block;
+  text-decoration: underline; 
+  margin: 10px 0;
+}
+
+.event-date {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.event-image {
+  width: 250px;
+  height: auto;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: $border;
+}
+
+.event-text {
+  padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Bokhylla */
+
+.book-collection {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap:20px;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.image-container img {
+  width: 350px;
+  height: 450px;
+  margin: 15px 15px;
+  border-radius: 10px;
+} 
+
+.book-item {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.overlay {
+  position: absolute;
+  top:0;
+  left: 15px;
+  width: 350px;
+  height: 450px;
+ background-color: black;
+  border-radius: 10px;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  padding: 10px;
+}
+
+.image-container:hover .overlay {
+  background-color: rgba(0,0,0,0.7);
+  opacity: 1;
+}
+
+figcaption h3 {
+  font-size: 24px;
+}
+
+.active {
+  display: inline-block;
+  color: $secondarycolor;
+  font-style: italic;
+}
+
+
+
+
+// Om oss
+
+.about {
+  grid-area: books;
+  border: 5px double black;
+  height: auto;
+  background-color: white;
+  margin-left: 25px;
+  margin-right: 25px;
+  font-family: $article-text;
   font-size: $font-size;
 }
