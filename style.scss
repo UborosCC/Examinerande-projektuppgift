@@ -213,15 +213,15 @@ footer {
   font-family: $article-text;
 }
 
-.evenemang-h1 {
-  display: inline-block;
+.evenemang-h2 {
+  flex-shrink: 0;
+  flex-basis: 100%;
   text-align: center;
   font-size: 30px;
   background-color: white;
-  border: $border;
-  border-radius: 10px;
-  width: 500px;
-  margin: 20px 0;
+  border-top: $border;
+  border-bottom: $border;
+  margin: 30px 0;
 }
 
 .event-section {
@@ -266,17 +266,6 @@ footer {
 .event-text {
   padding: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* Bokhylla */
 
