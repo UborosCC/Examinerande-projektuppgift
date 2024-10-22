@@ -35,10 +35,10 @@ body {
 header {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 h1 {
-  align-self: center;
   padding: 5px;
   text-shadow: 3px 3px rgba(255,255,255, .8);
 }
@@ -48,37 +48,13 @@ h1 {
   height: 200px;
 }
 
-.navbar-main {
-  width: 100%;
-  height: 50px;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  padding: 10px 10px 20px 10px;
-  border-style: dashed;
-  margin-bottom: 10px;
-  background-color: $primarycolor;
-}
-
-.navbar-main, a, .active {
-  display: inline-block;
-  padding: 3px 25px 5px 25px;
-  text-align: center;
-  font-size: $font-size;
-}
-
-a:hover {
-  cursor: pointer;
-  color: $secondarycolor;
-}
-
 .main {
   display: grid;
   grid-template-areas: 
   'books books events'
   'books books events';
   text-align: center;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin: 10px 25px;
 }
 
 .books {
@@ -134,16 +110,7 @@ h2 {
   font-size: $font-size;
 }
 
-@media screen and (max-width: 480px) {
-    .books {
-      display: flex;
-      flex-direction: column;
-    }
-    .events {
-      display: flex;
-      flex-direction: column;
-    }
-}
+/*footer*/
 
 footer {
   display: grid;
@@ -204,6 +171,8 @@ footer {
 .g-maps {
   border: white 5px double;
   margin: 15px 0;
+  width: 400px;
+  height: 350px;
 }
 
 /*Evenemang*/
@@ -211,134 +180,259 @@ footer {
 .event-main {
   text-align: center;
   font-family: $article-text;
-}
 
-.evenemang-h2 {
-  flex-shrink: 0;
-  flex-basis: 100%;
-  text-align: center;
-  font-size: 30px;
-  background-color: white;
-  border-top: $border;
-  border-bottom: $border;
-  margin: 30px 0;
-}
-
-.event-section {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  height: auto;
-}
-
-.event-container {
-  display: flex;
-  justify-content: flex-end;
-  text-align: left;
-  width: 500px;
-  height: 300px;
-  margin: 20px;
-  background-color: white;
-  border: $border;
-  border-radius: 10px;
-}
-
-.event-title {
-  display: block;
-  text-decoration: underline; 
-  margin: 10px 0;
-}
-
-.event-date {
-  display: block;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.event-image {
-  width: 250px;
-  height: auto;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-right: $border;
-}
-
-.event-text {
-  padding: 10px;
+  .evenemang-h2 {
+    @include section-h1
+  }
+  .event-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .event-container {
+    @include event-container
+  }
+  .event-title {
+    display: block;
+    text-decoration: underline; 
+    margin: 10px 0;
+  }
+  .event-date {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .event-image {
+    width: 300px;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: $border;
+  }
+  .event-text {
+    padding: 10px;
+  }
 }
 
 /* Bokhylla */
+.bokhylla-h1 {
+  @include section-h1 
+}
 
+
+/* Nestling book collection */
 .book-collection {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap:20px;
-}
 
+  .book-item {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .image-container img {
+    width: 350px;
+    height: 450px;
+    margin: 15px 15px;
+    border-radius: 10px;
+  } 
+}
+ 
+ /*Nestling overlay */
 .image-container {
   position: relative;
   width: 100%;
+
+  .overlay { 
+    @include overlay
+  }
+
+  &:hover .overlay {
+    background-color: rgba(0,0,0,0.7);
+    opacity: 1;
+    border: 4px double rgb(255, 255, 255);
+    cursor: pointer§  ;
+  }
+  figcaption h3 {
+    font-size: 24px;
+  }
 }
 
-.image-container img {
-  width: 350px;
-  height: 450px;
-  margin: 15px 15px;
-  border-radius: 10px;
-} 
-
-.book-item {
-  text-align: center;
-  margin-top: 15px;
-}
-
-.overlay {
-  position: absolute;
-  top:0;
-  left: 15px;
-  width: 350px;
-  height: 450px;
- background-color: black;
-  border-radius: 10px;
-  overflow: hidden;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  padding: 10px;
-}
-
-.image-container:hover .overlay {
-  background-color: rgba(0,0,0,0.7);
-  opacity: 1;
-}
-
-figcaption h3 {
-  font-size: 24px;
-}
-
-.active {
+.nav-active {
   display: inline-block;
   color: $secondarycolor;
   font-style: italic;
+  padding: 3px 25px 5px 25px;
 }
 
-
-
-
 // Om oss
+.about {
+  @include about-us; 
+
+  h2 {
+    margin: 20px;
+  }
+
+  p {
+    margin: 10px 0;
+  }
+}
+/*Media*/
+
+/*Mobile*/
+@media screen and (max-width: 480px) {
+  .logo {
+    width: 150px;
+    height: 150px;
+  }
+  h1 {
+  text-shadow: 1.3px 1.3px rgba(255,255,255, .8);
+  }
+  .writing {
+    font-size: 40px;
+  }
+  .navbar-main {
+    overflow: hidden;
+    background-color: $primarycolor;
+    position: relative;
+    border-top: 2px dashed black;
+    border-bottom: 2px dashed black;
+
+    #navLinks {
+      display: none;
+    }
+
+    a {
+      color: black;
+      font-size: 15px;
+      display: block;
+      padding: 3px 25px 5px 25px;
+    }
+
+    a:hover {
+      color: $secondarycolor;
+    }
+
+    .nav-icon {
+      position: absolute;
+      display: block;
+      right: 10px;
+      top: 0;
+      .nav-img-icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  
+  .main {
+    grid-template-areas: 'books books books'
+    'events events eve';
+  }
+
+  .event-container {
+    width: 350px;
+    height: 200px;
+  }
+  
+  .event-image {
+    width: 150px;
+  }
+  
+  .event-text {
+    font-size: 10px;
+  }    
+
+  /*footer*/ 
+  footer {
+    h2 {
+      font-size: 15px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .footer-h3 {
+    margin: 10px 0;
+  }
+
+  .footer-h3, .footer-mail {  
+    font-size: 10px;
+  }
+
+.contact, .open-hours, .map {
+  padding: 10px;
+}
+
+.social-media {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+.social-image {
+  width: 10px;
+  height: 10px;
+  margin: 5px 0;
+}
+
+.timetable {
+  border: double 2px;
+  margin: 10px 2px 2px 2px;
+
+  td {
+    padding: 3px;
+    font-size: 8px;
+  }
+}
+
+.g-maps {
+  border: 2px double;
+  margin: 10px 0;
+  width: 80px;
+  height: 100px;
+}
 
 .about {
-  grid-area: books;
-  border: 5px double black;
-  height: auto;
-  background-color: white;
-  margin-left: 25px;
-  margin-right: 25px;
-  font-family: $article-text;
+  h2 {
+    font-size: 10px;
+  }
+  p {
+    font-size: 10px;
+  }
+}
+}
+
+/*Desktop and Laptop*/
+@media screen and (min-width: 768px) and (max-width: 1920px) {
+.navbar-main {
+  @include default-nav
+}
+
+#navLinks {
+  display: inline-block;
+}
+
+.navbar-main, a, .active {
+  display: inline-block;
+  padding: 3px 25px 5px 25px;
+  text-align: center;
   font-size: $font-size;
+}
+
+.nav-icon {
+  display: none;
+}
+
+a:hover {
+  cursor: pointer;
+  color: $secondarycolor;
+}  
 }

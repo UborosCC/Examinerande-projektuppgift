@@ -20,10 +20,15 @@
         <h1 class="writing text-5xl">Pärmar & Poesi</h1>
     </header>
     <nav class="navbar-main">
-        <p class="active">Hem</p>
-        <a href="bokhylla.html">Bokhylla</a>
-        <a href="evenemang.html">Evenemang</a>
-        <a href="omoss.html">Om Oss</a>
+        <p class="nav-active">Hem</p>
+        <section id="navLinks">
+            <a href="bokhylla.html">Bokhylla</a>
+            <a href="evenemang.html">Evenemang</a>
+            <a href="omoss.html">Om Oss</a>
+        </section>
+        <a href="javascript:void(0)" class="nav-icon" onclick="navFunction()">
+            <img class="nav-img-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/800px-Hamburger_icon.svg.png" alt="hamburger menu icon">
+        </a>
     </nav>
     <main class="main">
         <section class="books">
@@ -43,7 +48,7 @@
                 
                 <figure class="events-container">
                     <img class="events-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Eggs_and_bacon_and_home_fries_face_16.jpg/640px-Eggs_and_bacon_and_home_fries_face_16.jpg" alt="toothless dancing gif">
-                    <figcaption class="event-text"><span class="event-date">3 November <br> 09:00 - 12:00</span> <span class="event-title">Författareträff Jane Doe</span>Författaren Jane Doe kommer och hälsar på hos oss i Pärmar & Poesi, miss inte chansen att träffas på!</figcaption>
+                    <figcaption class="event-text"><span class="event-date">3 November <br> 09:00 - 12:00</span> <span class="event-title">Författareträff Jane Doe</span>Författaren Jane Doe kommer och hälsar på hos oss i Pärmar & Poesi, missa inte chansen att träffas på!</figcaption>
                 </figure>
 
                 <figure class="events-container">
@@ -58,7 +63,7 @@
             <h2>Kontakta oss</h2>
 
             <h3 class="footer-h3">E-Post</h3>
-            <a href="">parmarochpoesi@gmail.com</a>
+            <a class="footer-mail" href="">parmarochpoesi@gmail.com</a>
 
             <h3 class="footer-h3">Sociala Medier</h3>
             <a class="social-media" href=""><img class="social-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/InstaOutlined.svg/640px-InstaOutlined.svg.png" alt="instagram"></a>
@@ -101,9 +106,18 @@
         </section>
         <section class="map">
             <h2>Hitta oss här</h2>
-
-            <iframe class="g-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16253.968935682042!2d16.426883339881897!3d59.387263529367644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465e8d16561c7477%3A0x219340a79189b026!2sSpicy%20Hot%20V%C3%A4sterleden!5e0!3m2!1ssv!2sse!4v1729509270631!5m2!1ssv!2sse" width="400" height="350" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="g-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16253.968935682042!2d16.426883339881897!3d59.387263529367644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465e8d16561c7477%3A0x219340a79189b026!2sSpicy%20Hot%20V%C3%A4sterleden!5e0!3m2!1ssv!2sse!4v1729509270631!5m2!1ssv!2sse" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
     </footer>
+    <script>
+        function navFunction() {
+          var x = document.getElementById("navLinks");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+    </script>
 </body>
 </html>

@@ -18,24 +18,30 @@
         <a href="index.html"><img class="logo" src="Images/logo.png" alt="Pärmar & Poesi logo"></a>
         <h1 class="writing text-5xl">Pärmar & Poesi</h1>
     </header>
-    <nav class="navbar-main">
+    <nav class="w-110 h-14 justify-center border-dashed rounded-xl border-4 border-white text-white text-center ml-20 mr-20 bg-black">
         <a href="index.html">Hem</a>
-        <a href="bokhylla.html">Bokhylla</a>
-        <a href="evenemang.html">Evenemang</a>
-        <p class="active">Om Oss</p>
+        <section id="navLinks">
+            <a href="bokhylla.html">Bokhylla</a>
+            <a href="evenemang.html">Evenemang</a>
+            <p class="nav-active">Om Oss</p>
+        </section>
+        <a href="javascript:void(0)" class="nav-icon" onclick="navFunction()">
+            <img class="nav-img-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/800px-Hamburger_icon.svg.png" alt="hamburger menu icon">
+        </a>
     </nav>
-    <main>
+    <main class="main">
         <section class="about">
-            <h2 class="text-center text-3xl font-bold">Om Oss</h2>
-            <p class="text-center">Vi på Pärmar & Poesi är genuint fokuserade på att passionen för böcker och
-               gemenskapen går ihop! Butiken i hjärtat av Eskilstuna är mer än bara en plats
+            <h2 class="text-center text-3xl font-bold">Om oss</h2>
+            <p class="text-justify mb-3">Vi på Pärmar & Poesi är genuint fokuserade på att passionen för böcker och
+               gemenskap går ihop! Butiken i hjärtat av Eskilstuna är mer än bara en plats
                att hitta nästa otroliga läsäventyr, det är också en plats där historierna får liv
-               och där nya bekantskaper formas. På Pärmar & Poesi får böcker oss att bli inspirerade, vi utbildas och sveper iväg er till nya och spännande världar. Det är just därför vårt utbud inkluderar allt från tidlösa klassiker till moderna bästsäljare med personliga rekommendationer från vår gedigna personal. Utöver vårt brinnande intresse för böcker så är vi väldigt engagerade
-               i att bygga upp en gemenskap av läsare. Under årets gång är vi värdar för många olika evenemang
-               som är till för alla bokälskare att sammanstråla. Våra bokcirklar ger er tillgång till att dela 
-               med er av vad ni tyckte om er senast lästa bok, djupdyka i diskussioner och skaffa nya vänner som har en ömsesidig kärlek till litteratur. Utöver bokcirklar så är vi mycket glada att med jämna mellanrum så bjuder vi in författare på besök där ni kan få er bok signerad, lyssna på när författaren läser högt ur sin senaste bok och vara med på frågestund där ni får chansen att
-               ställa en brinnande fråga till författaren.<br><br> Skön läsning och hoppas vi ses snart!
-            </p>
+               och där nya bekantskaper formas. På Pärmar & Poesi får böcker oss alla att bli inspirerade, vi utbildar varandra och sveps iväg till nya och spännande världar. Det är just därför vårt utbud inkluderar allt från tidlösa klassiker till moderna bästsäljare med personliga rekommendationer från vår kunniga personal. Utöver vårt brinnande intresse för böcker så är vi väldigt engagerade
+               i att bygga upp en gemenskap av läsare.</p>
+            <p class="text-justify"> Under årets gång är vi värdar för många olika evenemang
+               som är till för att alla bokälskare ska kunna sammanstråla. Våra bokcirklar ger er tillgång till att dela 
+               med er av vad ni tyckte om er senast lästa bok, djupdyka i diskussioner och skaffa nya vänner som har en ömsesidig kärlek till litteratur. Utöver bokcirklar så kan vi även erbjuda våra besökare att med jämna mellanrum träffa författare som vi bjuder in på besök, där ni kan få er bok signerad, lyssna på när författaren läser högt ur sin senaste bok och vara med på frågestund där ni får chansen att
+               ställa en brinnande fråga till författaren.</p>
+            <p class="text-justify">Trevlig läsning och hoppas vi ses snart!</p>
         </section>
     </main>
     <footer>
@@ -43,7 +49,7 @@
             <h2>Kontakta oss</h2>
 
             <h3 class="footer-h3">E-Post</h3>
-            <a href="">parmarochpoesi@gmail.com</a>
+            <a class="footer-mail" href="">parmarochpoesi@gmail.com</a>
 
             <h3 class="footer-h3">Sociala Medier</h3>
             <a class="social-media" href=""><img class="social-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/InstaOutlined.svg/640px-InstaOutlined.svg.png" alt="instagram"></a>
@@ -86,9 +92,18 @@
         </section>
         <section class="map">
             <h2>Hitta oss här</h2>
-
-            <iframe class="g-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16253.968935682042!2d16.426883339881897!3d59.387263529367644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465e8d16561c7477%3A0x219340a79189b026!2sSpicy%20Hot%20V%C3%A4sterleden!5e0!3m2!1ssv!2sse!4v1729509270631!5m2!1ssv!2sse" width="400" height="350" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="g-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16253.968935682042!2d16.426883339881897!3d59.387263529367644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465e8d16561c7477%3A0x219340a79189b026!2sSpicy%20Hot%20V%C3%A4sterleden!5e0!3m2!1ssv!2sse!4v1729509270631!5m2!1ssv!2sse" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
     </footer>
+    <script>
+        function navFunction() {
+          var x = document.getElementById("navLinks");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+    </script>
 </body>
 </html>
