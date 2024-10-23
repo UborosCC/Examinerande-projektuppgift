@@ -222,6 +222,8 @@ footer {
 
 .event-text {
   padding: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .event-title {
   display: block;
@@ -230,8 +232,22 @@ footer {
 }
 .event-date {
   display: block;
-  font-size: 12px;
   font-weight: bold;
+}
+
+.rainbow {
+  animation: rainbow-border infinite 10s linear;
+}
+
+@keyframes rainbow-border {
+  0% {border-color: blue;}
+  20% {border-color: indigo;}
+  40% {border-color: violet;}
+  60% {border-color: red;}
+  70% {border-color: orange;}
+  80% {border-color: yellow;}
+  90% {border-color: green;}
+  100% {border-color: blue;}
 }
 
 /* Bokhylla */
