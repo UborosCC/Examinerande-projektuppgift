@@ -32,6 +32,7 @@ body {
   font-size: 80px;
 }
 
+/*header*/
 header {
   display: flex;
   justify-content: center;
@@ -43,33 +44,51 @@ h1 {
   text-shadow: 3px 3px rgba(255,255,255, .8);
 }
 
+h2 {
+  font-size: $font-size;
+}
+
 .logo {
   width: 200px;
   height: 200px;
 }
 
+.nav-active {
+  display: inline-block;
+  color: $secondarycolor;
+  font-style: italic;
+  padding: 3px 25px 5px 25px;
+}
+
+/*Index*/
+
 .main {
   display: grid;
   grid-template-areas: 
-  'books books events'
   'books books events';
   text-align: center;
   margin: 10px 25px;
+  font-family: $article-text; 
 }
 
 .books {
   grid-area: books;
   border: $border;
-  height: auto;
+  height: 55%;
   background-color: white;
-  font-family: $article-text; 
+  margin: 5px;
+
+  h2 {
+    margin-top: 10px;
+  }
 }
 
 .books-img {
   margin: 20px 10px;
   display: inline-block;
-  height: 300px;
-  width: 200px;
+  height: 350px;
+  width: 220px;
+  border: $border;
 }
 
 .events {
@@ -77,7 +96,11 @@ h1 {
   border: $border;
   height: auto;
   background-color: white;
-  font-family: $article-text; 
+  margin: 5px;
+
+  h2 {
+    margin-top: 10px;
+  }
 }
 
 .events-section {
@@ -104,10 +127,6 @@ h1 {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   border-right: $border;
-}
-
-h2 {
-  font-size: $font-size;
 }
 
 /*footer*/
@@ -193,16 +212,6 @@ footer {
   .event-container {
     @include event-container
   }
-  .event-title {
-    display: block;
-    text-decoration: underline; 
-    margin: 10px 0;
-  }
-  .event-date {
-    display: block;
-    font-size: 12px;
-    font-weight: bold;
-  }
   .event-image {
     width: 300px;
     height: auto;
@@ -210,9 +219,20 @@ footer {
     border-bottom-left-radius: 5px;
     border-right: $border;
   }
-  .event-text {
-    padding: 10px;
-  }
+}
+
+.event-text {
+  padding: 10px;
+}
+.event-title {
+  display: block;
+  text-decoration: underline; 
+  margin: 10px 0;
+}
+.event-date {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 /* Bokhylla */
@@ -254,23 +274,20 @@ footer {
     background-color: rgba(0,0,0,0.7);
     opacity: 1;
     border: 4px double rgb(255, 255, 255);
-    cursor: pointer§  ;
+    cursor: pointer;
   }
   figcaption h3 {
     font-size: 24px;
   }
 }
 
-.nav-active {
-  display: inline-block;
-  color: $secondarycolor;
-  font-style: italic;
-  padding: 3px 25px 5px 25px;
-}
-
 // Om oss
 .about {
   @include about-us; 
+
+  h2, p {
+    padding: 15px;
+  }
 
   h2 {
     margin: 20px;
@@ -327,38 +344,108 @@ footer {
       }
     }
   }
-  
+  /*index*/
   .main {
-    grid-template-areas: 'books books books'
-    'events events eve';
-  }
+    grid-template-areas: 
+    'events events events'
+    'books books books';
+    margin: 10px 25px;
 
-  .event-container {
-    width: 350px;
-    height: 200px;
+    h2 {
+      font-size: 10px;
+    }
   }
   
-  .event-image {
+  .books {
+    height: auto;
+    margin: 5px;
+  }
+  
+  .books-img {
+    margin: 10px;
+    height: 220px;
     width: 150px;
+  }  
+
+  .events-container {
+    width: 250px;
+    height: 150px;
+    margin: 10px 0;
   }
   
-  .event-text {
-    font-size: 10px;
-  }    
+  .events-image {
+    width: 100px;
+  }
+  
+  /*Evenemanger*/
 
-  /*footer*/ 
-  footer {
+  .event-main {
+  .event-container {
+    height: 160px;
+    width: 250px;
+  }
+
+  .event-image {
+    width: 120px;
+  }
+  }
+
+  .event-text {
+    padding: 5px;
+    font-size: 8px;
+  }
+
+  .event-title {
+  font-size: 10px;
+  }
+  
+  .event-date {
+  font-size: 8px;
+  }
+
+  /*Bokhylla*/
+  
+  /* Nestling book collection */
+  .book-collection {
+    .book-item {
+      margin-top: 0;
+    }
+  
+    .image-container img {
+      width: 180px;
+      height: 200px;
+      margin: 5px;
+    } 
+  }
+   
+   /*Nestling overlay */
+  .image-container {
+  
+    .overlay { 
+      @include overlay;
+      left: 5px;
+      width: 180px;
+      height: 200px;
+    }
+  
+    figcaption h3, figcaption p {
+      font-size: 10px;
+    }
+  }
+  
+/*footer*/ 
+footer {
     h2 {
       font-size: 15px;
       margin: 0;
       padding: 0;
     }
   }
-
+  
   .footer-h3 {
     margin: 10px 0;
   }
-
+  
   .footer-h3, .footer-mail {  
     font-size: 10px;
   }
@@ -401,14 +488,20 @@ footer {
 }
 
 .about {
+  h2, p {
+    padding: 5px;
+  }
   h2 {
-    font-size: 10px;
+    font-size: 15px;
+    margin: 0px;
   }
   p {
     font-size: 10px;
+    margin: 5px;
   }
 }
 }
+
 
 /*Desktop and Laptop*/
 @media screen and (min-width: 768px) and (max-width: 1920px) {

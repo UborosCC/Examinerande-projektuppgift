@@ -1,9 +1,447 @@
+@charset "UTF-8";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+body {
+  background-image: url("https://i.ibb.co/JdR237x/booksbg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.article-text {
+  font-family: "Kurale", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.writing {
+  font-family: "Charm";
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 80px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  padding: 5px;
+  text-shadow: 3px 3px rgba(255, 255, 255, 0.8);
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+}
+
+.main {
+  display: grid;
+  grid-template-areas: "books books events" "books books events";
+  text-align: center;
+  margin: 10px 25px;
+}
+
+.books {
+  grid-area: books;
+  border: black double 5px;
+  height: auto;
+  background-color: white;
+  font-family: "Kurale";
+}
+
+.books-img {
+  margin: 20px 10px;
+  display: inline-block;
+  height: 300px;
+  width: 200px;
+}
+
+.events {
+  grid-area: events;
+  border: black double 5px;
+  height: auto;
+  background-color: white;
+  font-family: "Kurale";
+}
+
+.events-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.events-container {
+  display: flex;
+  justify-content: flex-end;
+  text-align: left;
+  width: 500px;
+  height: 250px;
+  margin: 10px 0;
+  background-color: white;
+  border: black double 5px;
+  border-radius: 10px;
+}
+
+.events-image {
+  width: 200px;
+  height: auto;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: black double 5px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+/*footer*/
+footer {
+  display: grid;
+  grid-template-areas: "con hour map map" "con hour map map";
+  background-color: red;
+  color: #f3f3f3;
+  border-top: dashed white 2px;
+  margin-top: 20px;
+}
+
+.footer-h3 {
+  text-decoration: underline;
+  margin: 20px 0;
+}
+
+.contact, .open-hours, .map {
+  padding: 15px;
+}
+
+.contact {
+  grid-area: con;
+}
+
+.open-hours {
+  grid-area: hour;
+}
+
+.map {
+  grid-area: map;
+}
+
+.social-media {
+  background-color: #f3f3f3;
+  border: black double 5px;
+  border-radius: 10px;
+  width: 75px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.social-image {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+}
+
+.timetable {
+  border: white 5px double;
+  margin: 15px 0;
+}
+.timetable td {
+  padding: 10px 15px;
+}
+
+.g-maps {
+  border: white 5px double;
+  margin: 15px 0;
+  width: 400px;
+  height: 350px;
+}
+
+/*Evenemang*/
+.event-main {
+  text-align: center;
+  font-family: "Kurale";
+}
+.event-main .evenemang-h2 {
+  flex-shrink: 0;
+  flex-basis: 100%;
+  text-align: center;
+  font-size: 30px;
+  background-color: white;
+  border-top: black double 5px;
+  border-bottom: black double 5px;
+  margin: 30px 0;
+  font-family: "Kurale";
+}
+.event-main .event-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: auto;
+}
+.event-main .event-container {
+  display: flex;
+  justify-content: flex-end;
+  text-align: left;
+  width: 600px;
+  height: 300px;
+  margin: 20px;
+  background-color: white;
+  border: black double 5px;
+  border-radius: 10px;
+}
+.event-main .event-title {
+  display: block;
+  text-decoration: underline;
+  margin: 10px 0;
+}
+.event-main .event-date {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+}
+.event-main .event-image {
+  width: 300px;
+  height: auto;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: black double 5px;
+}
+.event-main .event-text {
+  padding: 10px;
+}
+
+/* Bokhylla */
+.bokhylla-h1 {
+  flex-shrink: 0;
+  flex-basis: 100%;
+  text-align: center;
+  font-size: 30px;
+  background-color: white;
+  border-top: black double 5px;
+  border-bottom: black double 5px;
+  margin: 30px 0;
+  font-family: "Kurale";
+}
+
+/* Nestling book collection */
+.book-collection {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.book-collection .book-item {
+  text-align: center;
+  margin-top: 15px;
+}
+.book-collection .image-container img {
+  width: 350px;
+  height: 450px;
+  margin: 15px 15px;
+  border-radius: 10px;
+}
+
+/*Nestling overlay */
+.image-container {
+  position: relative;
+  width: 100%;
+}
+.image-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 350px;
+  height: 450px;
+  background-color: black;
+  border-radius: 10px;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  padding: 10px;
+}
+.image-container:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+  border: 4px double rgb(255, 255, 255);
+  cursor: pointer§;
+}
+.image-container figcaption h3 {
+  font-size: 24px;
+}
+
+.nav-active {
+  display: inline-block;
+  color: #a80000;
+  font-style: italic;
+  padding: 3px 25px 5px 25px;
+}
+
+.about {
+  grid-area: books;
+  border: 5px double white;
+  height: auto;
+  background-color: black;
+  margin-left: 25px;
+  margin-right: 25px;
+  font-family: "Kurale";
+  font-size: 22px;
+  padding: 5px 5px 5px 5px;
+  color: #f3f3f3;
+}
+.about h2 {
+  margin: 20px;
+}
+.about p {
+  margin: 10px 0;
+}
+
+/*Media*/
+/*Mobile*/
+@media screen and (max-width: 480px) {
+  .logo {
+    width: 150px;
+    height: 150px;
+  }
+  h1 {
+    text-shadow: 1.3px 1.3px rgba(255, 255, 255, 0.8);
+  }
+  .writing {
+    font-size: 40px;
+  }
+  .navbar-main {
+    overflow: hidden;
+    background-color: #f3f3f3;
+    position: relative;
+    border-top: 2px dashed black;
+    border-bottom: 2px dashed black;
+  }
+  .navbar-main #navLinks {
+    display: none;
+  }
+  .navbar-main a {
+    color: black;
+    font-size: 15px;
+    display: block;
+    padding: 3px 25px 5px 25px;
+  }
+  .navbar-main a:hover {
+    color: #a80000;
+  }
+  .navbar-main .nav-icon {
+    position: absolute;
+    display: block;
+    right: 10px;
+    top: 0;
+  }
+  .navbar-main .nav-icon .nav-img-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .main {
+    grid-template-areas: "books books books" "events events eve";
+  }
+  .event-container {
+    width: 350px;
+    height: 200px;
+  }
+  .event-image {
+    width: 150px;
+  }
+  .event-text {
+    font-size: 10px;
+  }
+  /*footer*/
+  footer h2 {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+  }
+  .footer-h3 {
+    margin: 10px 0;
+  }
+  .footer-h3, .footer-mail {
+    font-size: 10px;
+  }
+  .contact, .open-hours, .map {
+    padding: 10px;
+  }
+  .social-media {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+  }
+  .social-image {
+    width: 10px;
+    height: 10px;
+    margin: 5px 0;
+  }
+  .timetable {
+    border: double 2px;
+    margin: 10px 2px 2px 2px;
+  }
+  .timetable td {
+    padding: 3px;
+    font-size: 8px;
+  }
+  .g-maps {
+    border: 2px double;
+    margin: 10px 0;
+    width: 80px;
+    height: 100px;
+  }
+  .about h2 {
+    font-size: 10px;
+  }
+  .about p {
+    font-size: 10px;
+  }
+}
+/*Desktop and Laptop*/
+@media screen and (min-width: 768px) and (max-width: 1920px) {
+  .navbar-main {
+    width: 100%;
+    height: 50px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    padding: 20px;
+    border-style: dashed;
+    margin-bottom: 10px;
+    background-color: black;
+    color: white;
+  }
+  #navLinks {
+    display: inline-block;
+  }
+  .navbar-main, a, .active {
+    display: inline-block;
+    padding: 3px 25px 5px 25px;
+    text-align: center;
+    font-size: 22px;
+  }
+  .nav-icon {
+    display: none;
+  }
+  a:hover {
+    cursor: pointer;
+    color: #a80000;
+  }
+}/*# sourceMappingURL=style.css.map */
