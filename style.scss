@@ -26,7 +26,6 @@ body {
 
 .writing {
   font-family: "Charm";
-
   font-weight: 400;
   font-style: italic;
   font-size: 80px;
@@ -74,7 +73,7 @@ h2 {
 .books {
   grid-area: books;
   border: $border;
-  height: 55%;
+  height: 1fr;
   background-color: white;
   margin: 5px;
 
@@ -84,7 +83,7 @@ h2 {
 }
 
 .books-img {
-  margin: 20px 10px;
+  margin: 20px 5px;
   display: inline-block;
   height: 350px;
   width: 220px;
