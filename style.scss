@@ -52,6 +52,15 @@ h2 {
   height: 200px;
 }
 
+.nav-icon {
+  display: none;
+}
+
+a:hover {
+  cursor: pointer;
+  color: $secondarycolor;
+}  
+
 .nav-active {
   display: inline-block;
   color: $secondarycolor;
@@ -519,7 +528,7 @@ footer {
 
 
 /*Desktop and Laptop*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
 .navbar-main {
   @include default-nav
 }
@@ -534,13 +543,4 @@ footer {
   text-align: center;
   font-size: $font-size;
 }
-
-.nav-icon {
-  display: none;
-}
-
-a:hover {
-  cursor: pointer;
-  color: $secondarycolor;
-}  
 }
